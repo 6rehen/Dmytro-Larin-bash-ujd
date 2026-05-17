@@ -2,9 +2,7 @@
 
 PLIK=$1
 
-shift
-
-for KATALOG in "$@"
+for KATALOG in `seq 2 $#`
   do
-    cp "$PLIK" "$KATALOG/"
+    cp "$PLIK" "${!KATALOG}/"
 done
